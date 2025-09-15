@@ -1,0 +1,34 @@
+{
+  "mjolnir": {
+    "tile_dir": "valhalla_tiles",
+    "admin": "admin.sqlite",
+    "timezone": "timezone.sqlite",
+    "import_bike_share_stations": false,
+    "import_transit": false
+  },
+  "loki": {
+    "actions": ["route", "locate", "isochrone", "trace_attributes", "trace_route", "height", "centroid", "status"]
+  },
+  "thor": {},
+  "odin": {},
+  "skadi": {
+    "height_tile_dir": "valhalla_tiles"
+  },
+  "meili": {
+    "customizable": true
+  },
+  "service_limits": {
+    "auto": {
+      "max_distance": 100000
+    },
+    "pedestrian": {
+      "max_distance": 25000
+    },
+    "bicycle": {
+      "max_distance": 50000
+    }
+  },
+  "tiles": {
+    "extract": "kazakhstan.tar"
+  }
+}

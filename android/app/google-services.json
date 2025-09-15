@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1073936352246",
+    "firebase_url": "https://showroom-5627d-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "showroom-5627d",
+    "storage_bucket": "showroom-5627d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1073936352246:android:a9839ac07b6a38efeffdd7",
+        "android_client_info": {
+          "package_name": "kz.dominium.stroymarket"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1073936352246-tiaa7m4as8os9nhm7mp1bsn4dun58urt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZlMRd56iiwPlwCOmoN7XXFH3G5sx9de8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1073936352246-tiaa7m4as8os9nhm7mp1bsn4dun58urt.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1073936352246-17tme3fjmgcn0t7togk1sbsdek9l4i4g.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.showroom"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
