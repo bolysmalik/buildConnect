@@ -1,7 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_valhalla/core/mock/mock_services.dart';
-import 'package:flutter_valhalla/features/routing/presentation/blocs/courier_request/courier_request_event.dart';
-import 'package:flutter_valhalla/features/routing/presentation/blocs/courier_request/courier_request_state.dart';
+import 'courier_request_event.dart';
+import 'courier_request_state.dart';
 
 class CourierRequestBloc extends Bloc<CourierRequestEvent, CourierRequestState> {
   final MockServiceManager _serviceManager = MockServiceManager();

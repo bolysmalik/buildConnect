@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
+import 'features.routing/presentation/screens/login & reg/authbloc/auth_bloc.dart';
 import 'features/routing/presentation/blocs/routing/routing_bloc.dart';
 import 'features/routing/data/repositories/routing_repository.dart';
 import 'features/routing/presentation/blocs/favorites/favorite_bloc.dart';
@@ -69,7 +70,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider(create: (_) => RoutingBloc(RoutingRepository())),
         BlocProvider(create: (_) => AuthBloc()),
         BlocProvider(create: (_) => ThemeCubit()),
         BlocProvider(create: (_) => FavoriteBloc()),
