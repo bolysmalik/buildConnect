@@ -1,7 +1,10 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_valhalla/features/routing/presentation/blocs/service_posting/service_posting_event.dart';
-import 'package:flutter_valhalla/features/routing/presentation/blocs/service_posting/service_posting_state.dart';
+import 'package:flutter_valhalla/features.routing/presentation/blocs/service_posting/service_posting_event.dart' hide RemoveAttachment, AddAttachment;
+import 'package:flutter_valhalla/features.routing/presentation/blocs/service_posting/service_posting_state.dart';
 import 'package:flutter_valhalla/core/mock/mock_service_manager.dart';
+
+import '../bloc/chat_event.dart';
+import '../courier_request/courier_request_event.dart' hide AddAttachment;
 
 class ServicePostingBloc extends Bloc<ServicePostingEvent, ServicePostingState> {
   final MockServiceManager _serviceManager = MockServiceManager();

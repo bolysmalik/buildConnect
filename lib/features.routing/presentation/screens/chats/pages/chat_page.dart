@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_valhalla/features/routing/presentation/widgets/service_details_sheet.dart';
 import 'package:intl/intl.dart';
 import 'dart:io';
 import '../../../blocs/bloc/chat_bloc.dart';
@@ -13,7 +12,7 @@ import '../../../../data/models/attachment.dart';
 import '../../../../../../shared/widgets/image_viewer_page.dart';
 import '../../../../../../shared/widgets/file_viewer_dialog.dart';
 import '../../../../../../core/theme/app_colors.dart';
-import '../../rtc_page.dart';
+import '../../../widgets/service_details_sheet.dart';
 
 class ChatPage extends StatefulWidget {
   final String? contactName;
@@ -141,17 +140,6 @@ class _ChatPageState extends State<ChatPage>
       actions: [
         BlocBuilder<ChatBloc, ChatState>(
           builder: (context, state) {
-            if (state is ChatLoaded) {
-              return IconButton(
-                icon: const Icon(Icons.videocam),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (_) => const RtcPage()),
-                  );
-                },
-              );
-            }
             return const SizedBox.shrink();
           },
         ),

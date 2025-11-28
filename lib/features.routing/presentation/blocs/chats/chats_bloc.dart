@@ -1,5 +1,4 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../data/services/chat_service.dart';
 import 'chats_event.dart';
 import 'chats_state.dart';
 

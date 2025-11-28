@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_valhalla/features/routing/presentation/screens/create%20requests%20and%20services/widgest/base_request_form.dart';
-import 'package:flutter_valhalla/features/routing/presentation/screens/create%20requests%20and%20services/widgest/form_fields.dart';
-import 'package:flutter_valhalla/features/routing/presentation/screens/create%20requests%20and%20services/widgest/media_section.dart';
-import 'package:flutter_valhalla/features/routing/presentation/blocs/foreman_request/foreman_request_bloc.dart';
-import 'package:flutter_valhalla/features/routing/presentation/blocs/foreman_request/foreman_request_event.dart';
-import 'package:flutter_valhalla/features/routing/presentation/blocs/foreman_request/foreman_request_state.dart';
-import 'package:flutter_valhalla/features/routing/presentation/screens/create%20requests%20and%20services/widgest/submit_button.dart';
-import 'package:flutter_valhalla/features/routing/presentation/utils/date_time_picker.dart';
+import '../../../blocs/foreman_request/foreman_request_bloc.dart';
+import '../../../blocs/foreman_request/foreman_request_event.dart';
+import '../../../blocs/foreman_request/foreman_request_state.dart';
+import '../../../utils/date_time_picker.dart';
+import '../widgest/base_request_form.dart';
+import '../widgest/form_fields.dart';
+import '../widgest/media_section.dart';
+import '../widgest/submit_button.dart';
 
 class ForemanRequestScreen extends StatelessWidget {
   const ForemanRequestScreen({super.key});

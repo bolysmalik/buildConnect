@@ -3,11 +3,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_valhalla/core/utils/user_role_utils.dart';
-import 'package:flutter_valhalla/features/routing/presentation/screens/login%20&%20reg/authbloc/auth_bloc.dart';
-import 'package:flutter_valhalla/features/routing/presentation/screens/login%20&%20reg/authbloc/auth_state.dart';
-import 'package:flutter_valhalla/features/routing/presentation/screens/home_page/view/home_page.dart';
 import 'package:flutter_valhalla/core/theme/app_theme.dart'; // ✅ Добавлен импорт темы
-import 'package:flutter_valhalla/core/theme/theme_cubit.dart'; // ✅ Добавлен импорт ThemeCubit
+import 'package:flutter_valhalla/core/theme/theme_cubit.dart';
+
+import 'features.routing/presentation/screens/home_page/view/home_page.dart';
+import 'features.routing/presentation/screens/login & reg/authbloc/auth_bloc.dart';
+import 'features.routing/presentation/screens/login & reg/authbloc/auth_state.dart'; // ✅ Добавлен импорт ThemeCubit
 
 // ✅ Определяем роли пользователя
 enum UserRole { customer, foreman, supplier, courier, unauthorized }

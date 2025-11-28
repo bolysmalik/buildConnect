@@ -29,6 +29,9 @@ class MessagesScreenWithBloc extends StatelessWidget {
   }
 }
 
+class MockChatsBloc {
+}
+
 class _MessagesScreenState extends State<MessagesScreen> with SingleTickerProviderStateMixin {
   late TabController _tabController;
 

@@ -5,14 +5,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
+import 'features.routing/presentation/blocs/favorites/favorite_bloc.dart';
 import 'features.routing/presentation/screens/login & reg/authbloc/auth_bloc.dart';
-import 'features/routing/presentation/blocs/routing/routing_bloc.dart';
-import 'features/routing/data/repositories/routing_repository.dart';
-import 'features/routing/presentation/blocs/favorites/favorite_bloc.dart';
 import 'core/theme/theme_cubit.dart';
 import 'app.dart';
-import 'features/routing/presentation/screens/login & reg/authbloc/auth_bloc.dart';
-import 'firebase_call_handler.dart';
 
 /// Глобальный ключ навигатора (используется в FirebaseCallHandler)
 final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
@@ -21,7 +17,6 @@ final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 @pragma('vm:entry-point')
 Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
   await Firebase.initializeApp();
-  await FirebaseCallHandler.handleBackgroundMessage(message);
 }
 
 Future<void> main() async {
@@ -57,7 +52,6 @@ Future<void> main() async {
   FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
 
   // 5️⃣ Инициализация обработчика звонков
-  await FirebaseCallHandler.initialize();
 
   // 6️⃣ Запуск приложения
   runApp(const MyApp());

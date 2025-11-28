@@ -3,18 +3,17 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_valhalla/app.dart';
 import 'package:flutter_valhalla/core/utils/registration_role_extension.dart';
 import 'package:flutter_valhalla/core/utils/user_role_extension.dart';
-import 'package:flutter_valhalla/features/routing/presentation/screens/login%20&%20reg/authbloc/auth_bloc.dart';
-import 'package:flutter_valhalla/features/routing/presentation/screens/login%20&%20reg/authbloc/auth_event.dart';
-import 'package:flutter_valhalla/features/routing/presentation/screens/login%20&%20reg/login/view/login_page.dart';
-import 'package:flutter_valhalla/features/routing/presentation/screens/login%20&%20reg/registration/view/registration_page.dart';
-import 'package:flutter_valhalla/features/routing/presentation/screens/home_page/view/home_page.dart';
-import 'package:flutter_valhalla/features/routing/presentation/screens/map/routing_map_screen.dart';
-import 'package:flutter_valhalla/features/routing/presentation/screens/product%20finder/pages/product_finder_screen.dart';
-import 'package:flutter_valhalla/features/routing/presentation/screens/profile/view/profile_page.dart';
-import 'package:flutter_valhalla/features/routing/presentation/screens/my%20request/view/my_request_page.dart';
 import 'package:flutter_valhalla/core/theme/app_colors.dart';
 import 'package:flutter_valhalla/core/mock/mock_auth_service.dart';
 import 'package:flutter_valhalla/core/mock/mock_services.dart';
+
+import '../home_page/view/home_page.dart';
+import '../login & reg/authbloc/auth_bloc.dart';
+import '../login & reg/authbloc/auth_event.dart';
+import '../login & reg/login/view/login_page.dart';
+import '../login & reg/registration/view/registration_page.dart';
+import '../my request/view/my_request_page.dart';
+import '../profile/view/profile_page.dart';
 
 class AppDrawer extends StatelessWidget {
   final UserRole userRole;
@@ -199,19 +198,6 @@ class AppDrawer extends StatelessWidget {
             child: ListView(
               padding: EdgeInsets.zero,
               children: [
-                _buildDrawerItem(
-                  context: context,
-                  icon: Icons.search,
-                  title: 'Поиск продукта',
-                  onTap: () {
-                    Navigator.pop(context);
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (_) => const ProductFinderPage(),
-                      ),
-                    );
-                  },
-                ),
 
                 // 🔹 Выбор роли
                 ExpansionTile(
@@ -283,12 +269,6 @@ class AppDrawer extends StatelessWidget {
                   title: 'Карта',
                   onTap: () {
                     Navigator.pop(context);
-                    Navigator.of(context).pushAndRemoveUntil(
-                      MaterialPageRoute(
-                        builder: (_) => RoutingMapScreen(userRole: userRole),
-                      ),
-                      (route) => false,
-                    );
                   },
                 ),
                 _buildDrawerItem(
@@ -366,4 +346,11 @@ class AppDrawer extends StatelessWidget {
 
     return items;
   }
+}
+
+class RoutingMapScreen {
+}
+
+class ProductFinderPage {
+  const ProductFinderPage();
 }
