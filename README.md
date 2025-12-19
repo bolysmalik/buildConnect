@@ -2,24 +2,25 @@
 
 ## Overview
 BuildConnect is a mobile application MVP developed using Flutter.  
-The product aims to provide users with a structured interface for managing location-based tasks and navigation-related workflows using local and mock data.
+The product demonstrates a request management and messaging workflow using local mock data without any backend integration.
 
-The main problem addressed by the product is the lack of lightweight, easily deployable mobile solutions for testing navigation and location-based user flows without backend dependencies.
+The main problem addressed by the product is the need for a lightweight mobile MVP to showcase request handling and communication flows without relying on server-side infrastructure.
 
-The target users include students, developers, and small teams who need a mobile MVP for demonstration, prototyping, or educational purposes.
+The target user group includes students, project teams, and developers who need a functional prototype for educational or demonstration purposes.
 
 ## Tech Stack
 - Front end: Flutter (Dart)
 - State Management: BLoC
 - Data Storage: Local in-memory storage / mock data
-- Maps: Flutter Map (OpenStreetMap)
+- UI: Material Design
 - Tools: Git, GitHub
 
 ## Project Structure
 - /lib – application source code
-- /lib/core – shared utilities and constants
+- /lib/core – shared utilities, constants, and helpers
 - /lib/features – feature-based modules
-- /lib/features/routing – routing and map-related logic
+- /lib/features/requests – request listing and acceptance logic
+- /lib/features/messages – messaging UI and logic
 - /test – unit and widget tests
 - /docs – project documentation
 
@@ -36,5 +37,3 @@ Installation steps:
 3. Ensure a device or emulator is running
 
 Start command:
-flutter run
-flutter test
